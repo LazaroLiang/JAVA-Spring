@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--为customerDaoImpl配置，生成对象并注入属性dataSource-->
+    <bean id="customerDaoImpl" class="com.xidian.edu.Dao.DaoImpl.CustomerDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--为JdbcCustomerDaoImpl配置-->
+    <bean id="jdbcCustomerDaoImpl" class="com.xidian.edu.Dao.DaoImpl.JdbcCustomerDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="stringTest" value="Hello"/>
+    </bean>
+</beans>
