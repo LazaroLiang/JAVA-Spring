@@ -1,6 +1,6 @@
 package com.xidian.edu.main;
 
-import com.sun.scenario.effect.impl.state.LinearConvolveShadowPeer;
+//import com.sun.scenario.effect.impl.state.LinearConvolveShadowPeer;
 import com.xidian.edu.Dao.DaoImpl.CustomerDaoImpl;
 import com.xidian.edu.Dao.DaoImpl.JdbcCustomerDaoImpl;
 import com.xidian.edu.Dao.ICustomerDao;
@@ -11,6 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.List;
 
 public class AppMain {
+
     public static void main(String args[]){
         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
         CustomerDaoImpl dao=(CustomerDaoImpl)context.getBean("customerDaoImpl");
